@@ -255,6 +255,9 @@ __attribute__((deprecated));
 @optional
 - (BOOL)ubiquityStoreManager:(UbiquityStoreManager *)manager handleCloudContentCorruptionWithHealthyStore:(BOOL)storeHealthy;
 
+@optional
+- (BOOL)ubiquityStoreManagerHandleCloudDisabled:(UbiquityStoreManager *)manager;
+
 /** Triggered when the cloud content is deleted while cloud is enabled.
  *
  * When the cloud store is deleted, it may be that the user has deleted his cloud data for the app from one of his devices.
