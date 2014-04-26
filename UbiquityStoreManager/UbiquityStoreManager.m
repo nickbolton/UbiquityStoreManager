@@ -491,6 +491,9 @@ typedef NS_ENUM(NSUInteger, USMEnabledStore) {
 - (NSDictionary *)enumerateCloudStores {
 
     NSURL *cloudContentDirectory = [self URLForCloudContentDirectory];
+    if (!cloudContentDirectory)
+        return nil;
+
     NSError *error = nil;
     NSArray *cloudContentURLs = [[NSFileManager defaultManager]
             contentsOfDirectoryAtURL:cloudContentDirectory includingPropertiesForKeys:nil
